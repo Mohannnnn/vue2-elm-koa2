@@ -2,7 +2,7 @@
  * @Author: wuhan  [https://github.com/Mohannnnn] 
  * @Date: 2018-09-29 16:16:40 
  * @Last Modified by: wuhan
- * @Last Modified time: 2018-09-29 20:22:02
+ * @Last Modified time: 2018-09-29 20:29:47
  */
 
 const Koa = require('koa');
@@ -20,7 +20,7 @@ app.use(static(path.join(__dirname , '/dist')))
 app.use(koaBodyparser())
 
 app.use(async (ctx , next)=> {
-  if(ctx.url.startsWith('/restapi')) {
+  if(ctx.url.startsWith('/restapi') || ctx.url.startsWith('/pizza')) {
     ctx.respond = false;
     const a =  await proxy({
         target: 'https://h5.ele.me:443', // 服务器地址
