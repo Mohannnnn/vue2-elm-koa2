@@ -13,3 +13,15 @@ npm run dev             //本地开发测试
 
 npm run server          //上线开启服务
 ```
+### 目录结构
+```
+|-dist                      //打包上传的前端静态文件路径
+|-server
+|       controller
+|       midddleware
+|       routers
+|       utils
+|-config.js                 //配置文件       
+|-index.js                  //koa服务入口文件
+|-README.MD
+```
