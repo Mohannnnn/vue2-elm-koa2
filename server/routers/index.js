@@ -2,15 +2,16 @@
  * @Author: wuhan  [https://github.com/Mohannnnn] 
  * @Date: 2018-09-29 17:44:57 
  * @Last Modified by: wuhan
- * @Last Modified time: 2018-09-30 18:36:38
+ * @Last Modified time: 2018-10-01 15:17:14
  */
 
 const Router = require('koa-router');
 const fs = require('fs');
+const proxy = require('http-proxy-middleware');
 
 let router = new Router();
 
-route.get('/*' , async (ctx , next)=> {
+router.get('/*' , async (ctx , next)=> {
     if(ctx.url.startsWith('/restapi') || ctx.url.startsWith('/pizza')) {
       ctx.respond = false;
       return await proxy({
