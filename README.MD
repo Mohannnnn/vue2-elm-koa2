@@ -12,10 +12,10 @@
 ```bash
 npm install
 
-npm install nodemon -g  //本地开发监听文件变化
-npm run dev             //本地开发测试
+npm install nodemon -g      //本地开发监听文件变化
+npm run dev                 //本地开发测试
 
-npm run server          //上线开启服务
+npm run server              //上线开启服务
 ```
 ### 目录结构
 ```
